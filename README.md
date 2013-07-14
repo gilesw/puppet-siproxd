@@ -13,11 +13,11 @@
 
 ##Overview
 
-The NTP module installs, configures, and manages the siproxd service.
+The siproxd module installs, configures, and manages the siproxd service.
 
 ##Module Description
 
-The NTP module handles running NTP across a range of operating systems and
+The siproxd module handles running siproxd across a range of operating systems and
 distributions.  Where possible we use the upstream siproxd templates so that the
 results closely match what you'd get if you modified the package default conf
 files.
