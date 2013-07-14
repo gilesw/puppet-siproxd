@@ -1,0 +1,8 @@
+
+# Enabled boolean 1 or 0
+
+<% if service_enable -%>
+ENABLED=1
+<% else %>
+ENABLED=0
+<% end -%>
