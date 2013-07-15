@@ -12,12 +12,14 @@ class siproxd::params {
 
   case $::osfamily {
     'Debian': {
-      $config            = '/etc/siproxd.conf'
-      $config_template   = 'siproxd/siproxd.conf.debian.erb'
-      $package_name      = [ 'siproxd' ]
-      $service_name      = 'siproxd'
-      $chrootjail        = '/var/lib/siproxd'
-      $registration_file = '/var/lib/siproxd/siproxd_registrations'
+      $config                   = '/etc/siproxd.conf'
+      $config_template          = 'siproxd/siproxd.conf.debian'
+      $service_default_template = 'siproxd/siproxd.debian'
+      $service_default_file     = '/etc/default/siproxd'
+      $package_name             = [ 'siproxd' ]
+      $service_name             = 'siproxd'
+      $chrootjail               = '/var/lib/siproxd'
+      $registration_file        = '/var/lib/siproxd/siproxd_registrations'
     }
     default: {
       fail("The ${module_name} module is not supported on an ${::osfamily} based system.")
